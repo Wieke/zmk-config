@@ -1,6 +1,6 @@
 file_format: "1"
-id: testshield
-name: Test shield
+id: test
+name: Test
 type: shield
 requires: [nice_nani_v2]
 features:
