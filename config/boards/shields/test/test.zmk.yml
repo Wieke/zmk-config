@@ -2,6 +2,6 @@ file_format: "1"
 id: test
 name: Test
 type: shield
-requires: [nice_nani_v2]
+requires: [pro_micro]
 features:
   - keys
