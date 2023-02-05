@@ -1,1 +1,1 @@
-# D.I.Y. keyboard
+# ZMK Config
