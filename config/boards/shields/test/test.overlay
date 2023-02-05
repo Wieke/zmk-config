@@ -12,7 +12,7 @@
 		     RC(0,0)  RC(0,1)
 			  RC(0,2)  RC(0,3)
         >;
-	 }
+	 };
 
     kscan0: kscan_0 {
         compatible = "zmk,kscan-gpio-direct";
