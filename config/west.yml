@@ -4,10 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: cdc-mkb
       url-base: https://github.com/cdc-mkb
+    - name: jgreal
+      url-base: https://github.com/jgreel/zmk
   projects:
     - name: zmk
-      remote: cdc-mkb
-      revision: mouse-pim447
+      remote: jgreal
+      revision: devel-mouse-pim447
       import: app/west.yml
   self:
     path: config
