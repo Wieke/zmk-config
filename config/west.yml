@@ -5,7 +5,7 @@ manifest:
     - name: cdc-mkb
       url-base: https://github.com/cdc-mkb
     - name: jgreal
-      url-base: https://github.com/jgreel/zmk
+      url-base: https://github.com/jgreel
   projects:
     - name: zmk
       remote: jgreal
