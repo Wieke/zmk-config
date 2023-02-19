@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/jgreel
   projects:
     - name: zmk
-      remote: jgreal
-      revision: devel-mouse-pim447
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
