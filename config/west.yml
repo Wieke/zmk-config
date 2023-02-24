@@ -2,13 +2,11 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: cdc-mkb
-      url-base: https://github.com/cdc-mkb
-    - name: jgreal
-      url-base: https://github.com/jgreel
+    - name: wieke
+      url-base: https://github.com/wieke
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: wieke
       revision: main
       import: app/west.yml
   self:
