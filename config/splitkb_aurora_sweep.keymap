@@ -20,10 +20,19 @@
 
         letters {
             bindings = <
-&kp Q  &kp W      &kp F  &kp P  &kp B    &kp J  &kp L  &kp U      &kp Y      &kp SEMICOLON
-&kp A  &kp R      &kp S  &kp T  &kp G    &kp M  &kp N  &kp E      &kp I      &kp O
-&kp Z  &kp X      &kp C  &kp D  &kp V    &kp K  &kp H  &kp COMMA  &kp DOT    &kp SLASH
-&mo 0  &kp SPACE                                                  &kp ENTER  &mo 0
+&kp Q         &kp W      &kp F  &kp P  &kp B    &kp J  &kp L  &kp U      &kp Y          &kp SEMICOLON
+&kp A         &kp R      &kp S  &kp T  &kp G    &kp M  &kp N  &kp E      &kp I          &kp O
+&mt LSHIFT Z  &kp X      &kp C  &kp D  &kp V    &kp K  &kp H  &kp COMMA  &kp DOT        &mt RSHIFT SLASH
+&mo 0         &kp SPACE                                                  &kp BACKSPACE  &mo 1
+            >;
+        };
+
+        numbers {
+            bindings = <
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0
+&trans        &trans        &trans        &trans        &trans    &trans        &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans    &trans        &trans  &trans  &trans  &trans
+&trans        &kp ENTER                                                                         &trans  &trans
             >;
         };
     };
