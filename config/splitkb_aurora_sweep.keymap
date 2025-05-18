@@ -23,15 +23,24 @@
         };
     };
 
+    behaviors {
+        space_enter: space_enter {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPACE_ENTER";
+            #binding-cells = <0>;
+            bindings = <&kt SPACE>, <&kt ENTER>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         letters {
             bindings = <
-&kp Q         &kp W      &kp F  &kp P  &kp B    &kp J  &kp L  &kp U      &kp Y          &kp SEMICOLON
-&kp A         &kp R      &kp S  &kp T  &kp G    &kp M  &kp N  &kp E      &kp I          &kp O
-&mt LSHIFT Z  &kp X      &kp C  &kp D  &kp V    &kp K  &kp H  &kp COMMA  &kp DOT        &mt RSHIFT SLASH
-&mo 2         &kp SPACE                                                  &kp BACKSPACE  &mo 1
+&kp Q         &kp W         &kp F  &kp P  &kp B    &kp J  &kp L  &kp U      &kp Y          &kp SEMICOLON
+&kp A         &kp R         &kp S  &kp T  &kp G    &kp M  &kp N  &kp E      &kp I          &kp O
+&mt LSHIFT Z  &kp X         &kp C  &kp D  &kp V    &kp K  &kp H  &kp COMMA  &kp DOT        &mt RSHIFT SLASH
+&mo 2         &space_enter                                                  &kp BACKSPACE  &mo 1
             >;
         };
 
@@ -40,7 +49,7 @@
 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0
 &trans        &trans        &trans        &trans        &trans    &trans        &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans    &trans        &trans  &trans  &trans  &trans
-&trans        &kp ENTER                                                                         &trans  &trans
+&mo 4         &kp ENTER                                                                         &trans  &trans
             >;
         };
 
@@ -49,7 +58,16 @@
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans      &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans      &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans      &trans
-&trans  &trans                                                    &kp DELETE  &trans
+&trans  &trans                                                    &kp DELETE  &mo 4
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans                                                    &trans  &trans
             >;
         };
 
@@ -57,18 +75,11 @@
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans          &trans  &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &bt BT_CLR      &studio_unlock  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans          &trans          &trans  &trans  &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &trans        &trans        &trans          &trans          &trans  &trans  &trans  &trans
 &trans        &trans                                                                                    &trans  &trans
             >;
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        condition {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
