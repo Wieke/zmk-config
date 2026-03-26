@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "SPACE_ENTER";
             #binding-cells = <0>;
-            bindings = <&kt SPACE>, <&kt ENTER>;
+            bindings = <&kp SPACE>, <&kp ENTER>;
         };
     };
 
